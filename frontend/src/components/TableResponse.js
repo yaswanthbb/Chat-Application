@@ -9,13 +9,13 @@ const TableResponse = ({ tableData }) => {
             <tr
               key={index}
               className={`${
-                index % 2 === 0 ? "bg-[#2d2d2d]" : "bg-[#262626]"
+                index % 2 === 0 ? "bg-[#2d2d2d] dark:bg-[#E9F1FF]" : "bg-[#2d2d2d] dark:bg-[#E9F1FF]"
               } border-b border-[#3a3a3a] last:border-none`}
             >
-              <td className="py-2 px-3 font-medium text-white w-[50%]">
+              <td className="py-2 px-3 font-medium text-white dark:text-[#0B59A2] w-[50%]">
                 {row.key}
               </td>
-              <td className="py-2 px-3 text-[#cccccc]">{row.value}</td>
+              <td className="py-2 px-3 text-[#c1c1c1] dark:text-[#0077D2]">{row.value}</td>
             </tr>
           ))}
         </tbody>
