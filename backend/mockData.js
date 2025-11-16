@@ -7,7 +7,8 @@ let qaData = [
         { key: "Type", value: "Programming Language" },
         { key: "Release Year", value: "1995" },
         { key: "Used For", value: "Frontend + Backend" }
-      ]
+      ],
+      liked: null
     }
   },
   {
@@ -18,7 +19,8 @@ let qaData = [
         { key: "Type", value: "Frontend Library" },
         { key: "Created By", value: "Facebook" },
         { key: "Uses", value: "UI Components" }
-      ]
+      ],
+      liked: null
     }
   },
   {
@@ -29,7 +31,8 @@ let qaData = [
         { key: "Built On", value: "Chrome V8 Engine" },
         { key: "Type", value: "Backend Runtime" },
         { key: "Package Manager", value: "npm" }
-      ]
+      ],
+      liked: null
     }
   },
   {
@@ -40,7 +43,8 @@ let qaData = [
         { key: "Type", value: "Backend Framework" },
         { key: "Use Case", value: "Building APIs" },
         { key: "Routing", value: "Easy and Fast" }
-      ]
+      ],
+      liked: null
     }
   },
   {
@@ -51,7 +55,8 @@ let qaData = [
         { key: "Full Form", value: "HyperText Markup Language" },
         { key: "Usage", value: "Structure of Webpages" },
         { key: "Version", value: "HTML5" }
-      ]
+      ],
+      liked: null
     }
   },
   {
@@ -62,7 +67,8 @@ let qaData = [
         { key: "Full Form", value: "Cascading Style Sheets" },
         { key: "Use Case", value: "Styling + Layout" },
         { key: "Types", value: "Inline, Internal, External" }
-      ]
+      ],
+      liked: null
     }
   },
   {
@@ -73,7 +79,8 @@ let qaData = [
         { key: "Type", value: "Utility Framework" },
         { key: "Advantage", value: "Faster UI building" },
         { key: "Uses", value: "Classes for styling" }
-      ]
+      ],
+      liked: null
     }
   },
   {
@@ -84,7 +91,8 @@ let qaData = [
         { key: "Full Form", value: "Application Programming Interface" },
         { key: "Type", value: "REST API" },
         { key: "Usage", value: "Data exchange" }
-      ]
+      ],
+      liked: null
     }
   },
   {
@@ -95,7 +103,8 @@ let qaData = [
         { key: "Full Form", value: "JavaScript Object Notation" },
         { key: "Type", value: "Lightweight Data Format" },
         { key: "Used In", value: "APIs, Config Files" }
-      ]
+      ],
+      liked: null
     }
   },
   {
@@ -106,7 +115,8 @@ let qaData = [
         { key: "Types", value: "SQL & NoSQL" },
         { key: "Examples", value: "MongoDB, MySQL" },
         { key: "Purpose", value: "Permanent Data Storage" }
-      ]
+      ],
+      liked: null
     }
   }
 ];

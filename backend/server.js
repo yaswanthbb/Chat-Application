@@ -50,17 +50,21 @@ app.post("/api/chat/:id", (req, res) => {
   );
 
   if (foundQA) {
+    // deep clone answer so likes are unique PER SESSION
+    const newAnswer = JSON.parse(JSON.stringify(foundQA.answer));
+
     session.history.push({
       question,
-      answer: foundQA.answer,
+      answer: newAnswer,
     });
 
-    return res.json(foundQA.answer);
+    return res.json(newAnswer);
   }
 
   const defaultAnswer = {
     description: "Sorry, I don't have this answer in mock data.",
     table: [],
+    liked: null,
   };
 
   session.history.push({
@@ -69,6 +73,24 @@ app.post("/api/chat/:id", (req, res) => {
   });
 
   return res.json(defaultAnswer);
+});
+
+app.post("/api/feedback/:sessionId/:msgIndex", (req, res) => {
+  const { sessionId, msgIndex } = req.params;
+  const { liked } = req.body;
+
+  const session = sessions.find((s) => s.id === sessionId);
+  if (!session) {
+    return res.status(404).json({ error: "Session not found" });
+  }
+  const index = parseInt(msgIndex);
+
+  if (!session.history[index]) {
+    return res.status(404).json({ error: "Message not found" });
+  }
+  session.history[index].answer.liked = liked;
+
+  return res.json({ success: true });
 });
 
 app.delete("/api/session/:id", (req, res) => {
