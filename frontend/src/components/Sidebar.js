@@ -41,7 +41,7 @@ const Sidebar = (props) => {
   };
 
   return (
-    <div className="bg-[#181818] text-white w-[20vw] h-screen p-4">
+    <div className="bg-[#181818] text-white h-screen p-4 w-[20vw] overflow-y-auto scrollbar-hide max-md:w-full max-md:overflow-visible">
       <div className="flex flex-row justify-between items-center">
         <svg
           width="30"
